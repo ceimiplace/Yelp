@@ -6,6 +6,7 @@ import useResults from "../hooks/useResults";
 import Results from "../components/Results";
 const SearchScreen = () => {
   const [searchTem, setSearchTerm] = useState("");
+
   const [searchApi, results, errorMessage] = useResults();
   function returnResults(dollar) {
     return results.filter((element) => element.price === dollar);
